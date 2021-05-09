@@ -6,4 +6,4 @@ steps to run:
 
 2. add env variables to `.env`
 
-3. `docker-compose -f docker-compose.yml up`
+3. `docker-compose up`
