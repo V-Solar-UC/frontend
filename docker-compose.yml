@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  vueapp:
+    build:
+      context: .
+      target: dev
+    command: npm run dev
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    env_file: .env
+    environment:
+      NODE_ENV: development
+    ports:
+      - ${VITE_PORT}:${VITE_PORT}
