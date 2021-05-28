@@ -7,7 +7,11 @@
     "serve": "vite preview",
     "lint": "eslint . --ext .js,.vue"
   },
-  "pre-commit": [ "lint" ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint --ext .js,.vue src"
+    }
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
@@ -26,6 +30,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-vue": "^7.8.0",
+    "husky": "^6.0.0",
     "pre-commit": "^1.2.2"
   }
 }
