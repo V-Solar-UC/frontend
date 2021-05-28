@@ -2,7 +2,7 @@
     rev: ''  # Use the sha / tag you want to point at
     hooks:
     -   id: eslint
-        files: \.js$|\.vue$  # *.js, *.jsx, *.ts and *.tsx
+        types_or: [javascript, jsx, ts, tsx, vue]
         types: [file]
         additional_dependencies:
             -   eslint@7.23.0
