@@ -9,6 +9,9 @@ export default ({ mode }) => {
     plugins: [vue(), WindiCSS()],
     server: {
       port: process.env.VITE_PORT,
+      watch: {
+        usePolling: true,
+      }
     },
   });
 };

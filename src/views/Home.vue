@@ -1,6 +1,5 @@
 <template>
-  <div class="flex justify-center w-full h-full"></div>
-  <div>hola</div>
+  <div class="flex justify-center w-full h-full">Bienvenidos!</div>
 </template>
 
 <script>
