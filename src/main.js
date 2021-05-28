@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const app = createApp(App).use(router);
 
-app.component('font-awesome-icon', FontAwesomeIcon);
+    app.component('font-awesome-icon', FontAwesomeIcon);
 
 router.isReady().then(() => {
   app.mount('#app');
