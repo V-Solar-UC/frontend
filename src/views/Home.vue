@@ -1,10 +1,10 @@
 <template>
-  <div class="flex justify-center w-full h-full">Bienvenidos!</div>
+  <div class="flex justify-center w-full h-full">Bienvenidos</div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+name: 'Home',
   components: {},
   setup() {
     return {};
