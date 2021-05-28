@@ -11,7 +11,7 @@ export default ({ mode }) => {
       port: process.env.VITE_PORT,
       watch: {
         usePolling: true,
-      }
+      },
     },
   });
 };
