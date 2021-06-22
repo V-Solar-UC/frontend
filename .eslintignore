@@ -1,0 +1,4 @@
+dist/*.js
+src/assets
+public/**/*.js
+node_modules/
