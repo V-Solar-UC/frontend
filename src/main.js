@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-// eslint-disable-next-line import/no-unresolved
-import 'virtual:windi.css';
+
+import './index.css';
 
 // library.add();
 const app = createApp(App).use(router);
