@@ -14,4 +14,4 @@
 
 ### build
 
-`docker compose exec vuieapp npm run build`
+`docker compose exec vueapp npm run build`
