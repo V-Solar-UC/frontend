@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-red-round {
+    @apply flex justify-center items-center text-white bg-[#ef1818] h-[40px] w-[170px] rounded-full 
+          uppercase text-sm font-bold active:bg-red-700 sm:hover:bg-red-700 sm:hover:shadow-xl outline-none;
+  }
+
+  .btn-red-square {
+    @apply text-white bg-[#ff0000] w-[120px] h-[40px] p-2;
+  }
+}
+
+.carousel__pagination-button {
+  background-color: white;
+  border: 1px solid red;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.carousel__pagination-button--active {
+  background-color: red;
+}
