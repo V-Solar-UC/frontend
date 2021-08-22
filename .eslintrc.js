@@ -4,15 +4,21 @@ module.exports = {
     node: true,
   },
   extends: ['airbnb-base', 'plugin:vue/vue3-recommended', 'prettier'],
+  plugins: ['vue'],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['vue'],
   rules: {
     'no-console': 'warn',
     quotes: ['error', 'single', { avoidEscape: true }],
     semi: ['error', 'always'],
-    'max-len': ['error', { code: 100 }],
+    'max-len': [
+      2,
+      120,
+      {
+        ignorePattern: '^\\s.+class="',
+      },
+    ],
   },
 };
