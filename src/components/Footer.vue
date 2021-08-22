@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col bg-gray-50 w-full h-48 text-center">
-    <div class="text-center w-full h-full flex flex-col items-center justify-center space-y-5 pt-6">
+  <div class="flex flex-col w-full h-48 text-center bg-gray-50">
+    <div class="flex flex-col items-center justify-center w-full h-full pt-6 text-center space-y-5">
       <button class="btn-red-round">conocenos</button>
-      <div class="flex flex-row justify-between space-x-6 mt-6">
+      <div class="flex flex-row justify-between mt-6 space-x-6">
         <a href="https://github.com/V-Solar-UC">
           <font-awesome-icon :icon="['fab', 'github']" class="icon" />
         </a>
@@ -17,7 +17,7 @@
         </a>
       </div>
     </div>
-    <div class="text-center w-full bg-red-500 text-base py-2 text-white">
+    <div class="w-full py-2 text-base text-center text-white bg-red-500">
       V-Solar {{ year }} @ Todos los derechos reservados
     </div>
   </div>

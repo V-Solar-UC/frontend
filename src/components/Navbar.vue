@@ -1,25 +1,25 @@
 <template>
-  <div class="fixed flex items-center w-full h-20 bg-gray-100 z-50">
+  <div class="fixed z-50 flex items-center w-full h-20 bg-gray-100">
     <div class="relative w-full h-full">
       <img
         src="../assets/img/vsolar-logo.png"
-        class="absolute w-16 h-11 top-4 left-4 cursor-pointer"
+        class="absolute w-16 cursor-pointer h-11 top-4 left-4"
       />
 
       <div
         v-if="['', 'sm'].includes(screenSize)"
-        class="absolute w-12 h-12 top-5 right-5 cursor-pointer"
+        class="absolute w-12 h-12 cursor-pointer top-5 right-5"
         @click="isDropdownExpanded = !isDropdownExpanded"
       >
-        <div v-if="!isDropdownExpanded" class="w-full h-full flex flex-col divide-y-2 divide-black">
-          <div v-for="i in 4" :key="i" class="w-full flex-grow"></div>
+        <div v-if="!isDropdownExpanded" class="flex flex-col w-full h-full divide-y-2 divide-black">
+          <div v-for="i in 4" :key="i" class="flex-grow w-full"></div>
         </div>
-        <div v-else class="h-full flex mt-1 items-center justify-center text-3xl font-thin">X</div>
+        <div v-else class="flex items-center justify-center h-full mt-1 text-3xl font-thin">X</div>
       </div>
 
       <div
         v-else
-        class="ml-32 absolute flex flex-row items-center justify-center font-semibold text-lgl h-full right-16 cursor-pointer"
+        class="absolute flex flex-row items-center justify-center h-full ml-32 text-lg font-semibold cursor-pointer right-16"
       >
         <div class="navbar-button">Noticias</div>
         <div class="navbar-button">Equipo</div>
@@ -27,7 +27,7 @@
         <div class="navbar-button">Donaciones</div>
         <div class="navbar-button">Contacto</div>
         <div
-          class="relative navbar-button flex flex-row justify-center"
+          class="relative flex flex-row justify-center navbar-button"
           @click="isOthersDropdownExpanded = !isOthersDropdownExpanded"
         >
           <div class="pr-2">Otros</div>
@@ -44,15 +44,15 @@
 
       <transition
         enter-active-class="transform transition duration-500 ease-custom"
-        enter-class="-translate-y-1/2 scale-y-0 opacity-0"
-        enter-to-class="translate-y-0 scale-y-100 opacity-100"
+        enter-class="opacity-0 -translate-y-1/2 scale-y-0"
+        enter-to-class="opacity-100 translate-y-0 scale-y-100"
         leave-active-class="transform transition duration-500 ease-custom"
-        leave-class="translate-y-0 scale-y-100 opacity-100"
-        leave-to-class="-translate-y-1/2 scale-y-0 opacity-0"
+        leave-class="opacity-100 translate-y-0 scale-y-100"
+        leave-to-class="opacity-0 -translate-y-1/2 scale-y-0"
       >
         <ul
-          class="absolute top-20 w-full h-screen flex flex-col bg-gray-100 divide-y text-center"
           v-show="isDropdownExpanded"
+          class="absolute flex flex-col w-full h-screen text-center bg-gray-100 top-20 divide-r"
           @click="isDropdownExpanded = !isDropdownExpanded"
         >
           <li class="dropdown-button">Home</li>
@@ -68,16 +68,14 @@
 </template>
 
 <script>
-import useScreen from '../use/screen.js';
 import { ref, onMounted } from 'vue';
+import useScreen from '../use/screen';
 
 export default {
   name: 'Navbar',
   setup() {
     const isDropdownExpanded = ref(false);
-
     const isOthersDropdownExpanded = ref(false);
-
     const { screenSize } = useScreen();
 
     onMounted(() => {
@@ -95,7 +93,8 @@ export default {
 
 <style scoped>
 .dropdown-button {
-  @apply py-8 transition duration-100 ease-in-out focus:bg-gray-200 sm:hover:bg-gray-200 cursor-pointer;
+  @apply py-8 transition duration-100 ease-in-out focus:bg-gray-200 
+        sm:hover:bg-gray-200 cursor-pointer;
 }
 
 .others-dropdown-button {

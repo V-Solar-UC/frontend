@@ -1,2 +1,2 @@
-export * from './news';
-export * from './sponsors';
+export { default as newsAPI } from './news';
+export { default as sponsorsAPI } from './sponsors';

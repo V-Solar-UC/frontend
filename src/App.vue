@@ -7,10 +7,10 @@
 </template>
 
 <script>
+import { onMounted } from 'vue';
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
-import useScreen from './use/screen.js';
-import { onMounted } from 'vue';
+import useScreen from './use/screen';
 
 export default {
   components: { Navbar, Footer },
@@ -26,7 +26,9 @@ export default {
 
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap');
+@import url(
+  https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap
+);
 
 html,
 body {

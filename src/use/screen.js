@@ -1,16 +1,8 @@
 import { ref, computed } from 'vue';
 
-/* valid screen sizes:
- * 'sm': > 640px
- * 'md': > 768px
- * 'lg': > 1024px
- * 'xl': > 1280px
- * '2xl': > 1536px
- */
-
 const state = ref('');
 
-const updateScreenState = (e) => {
+const updateScreenState = () => {
   if (window.innerWidth < 640) {
     state.value = '';
   } else if (window.innerWidth >= 640 && window.innerWidth < 768) {

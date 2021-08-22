@@ -1,4 +1,4 @@
-export const seedSponsors = [
+export default [
   {
     id: '1',
     name: 'Tesla',

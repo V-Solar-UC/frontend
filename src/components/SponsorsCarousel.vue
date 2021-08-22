@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-full flex flex-col items-center justify-center">
-    <div class="w-full items-left p-10 text-2xl font-black">Auspiciadores</div>
+  <div class="flex flex-col items-center justify-center w-full h-full">
+    <div class="w-full p-10 text-2xl font-black items-left">Auspiciadores</div>
     <div class="w-full h-full">
       <div v-if="loading" class="w-32 h-32">loading...</div>
 
@@ -12,13 +12,13 @@
                 im a photo
               </div>
               <div class="flex flex-col items-center sm:w-1/2">
-                <div class="text-left py-12 p-4 text-xl font-semibold">
+                <div class="p-4 py-12 text-xl font-semibold text-left">
                   {{ new_.title }}
                 </div>
-                <div class="text-left p-6 text-sm">
+                <div class="p-6 text-sm text-left">
                   {{ new_.subtitle }}
                 </div>
-                <button class="btn-red-square my-4">PRESS ME</button>
+                <button class="my-4 btn-red-square">PRESS ME</button>
               </div>
             </div>
           </div>

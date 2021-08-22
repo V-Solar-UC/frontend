@@ -1,17 +1,5 @@
-//     id = Column('new_id', Integer, primary_key=True)
-//     title = Column(String, unique=True, index=True)
-//     subtitle = Column(String)
-//     reading_time = Column(Integer)
-//     subject = Column(String)
-//     content_dir = Column(String, unique=True)
-//     created_at = Column(DateTime, default=datetime.datetime.utcnow)
-//     last_edit_at = Column(DateTime, default=datetime.datetime.utcnow)
-
-//     author_id = Column(Integer, ForeignKey('users.user_id'))
-//     author = relationship('User', back_populates='news')
-
 import { ref } from 'vue';
-import { seedNews } from './mocks/news-body.js';
+import seedNews from './mocks/news-body';
 
 const newsState = ref([]);
 
@@ -33,6 +21,6 @@ async function getNews() {
   return newsState.value;
 }
 
-export const newsAPI = {
+export default {
   getNews,
 };

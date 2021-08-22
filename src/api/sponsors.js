@@ -1,9 +1,5 @@
-// id Integer
-// name String
-// logo_path String
-
 import { ref } from 'vue';
-import { seedSponsors } from './mocks/sponsors.js';
+import seedSponsors from './mocks/sponsors';
 
 const sponsorsRef = ref([]);
 
@@ -25,6 +21,6 @@ async function getSponsors() {
   return sponsorsRef.value;
 }
 
-export const sponsorsAPI = {
+export default {
   getSponsors,
 };

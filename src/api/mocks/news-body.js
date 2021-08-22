@@ -1,4 +1,5 @@
-export const seedNews = [
+/* eslint-disable */
+export default [
   {
     id: '1',
     title: 'Example new number one',

@@ -33,14 +33,13 @@
 <script>
 import NewsFeed from '../components/NewsFeed.vue';
 import SponsorsCarousel from '../components/SponsorsCarousel.vue';
-import useScreen from '../use/screen.js';
+import useScreen from '../use/screen';
 
 export default {
   name: 'Home',
   components: { NewsFeed, SponsorsCarousel },
   setup() {
     const { screenSize } = useScreen();
-
     return { screenSize };
   },
 };
