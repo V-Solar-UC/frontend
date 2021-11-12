@@ -52,7 +52,7 @@
       >
         <ul
           v-show="isDropdownExpanded"
-          class="absolute flex flex-col w-full h-screen text-center bg-gray-100 top-20 divide-r"
+          class="absolute flex flex-col w-full text-center bg-gray-100 top-20 divide-r"
           @click="isDropdownExpanded = !isDropdownExpanded"
         >
           <li class="dropdown-button">Home</li>
@@ -93,7 +93,7 @@ export default {
 
 <style scoped>
 .dropdown-button {
-  @apply py-8 transition duration-100 ease-in-out focus:bg-gray-200 
+  @apply py-3 transition duration-100 ease-in-out focus:bg-gray-200 
         sm:hover:bg-gray-200 cursor-pointer;
 }
 
